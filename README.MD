@@ -12,9 +12,13 @@ Execute as migrações do django:
 
     docker-compose run backend python manage.py migrate
 
-Adicione dados para teste:
+Adicione dados para teste (Por padrão é criado 200 produtores): 
 
-    docker-compose run backend python manage.py runscript add_fake_data {{ quantidade }}
+    docker-compose run backend python manage.py runscript add_fake_data
+
+Para adicionar uma quantidade especifica de Produtores:
+
+    docker-compose run backend python manage.py runscript add_fake_data --script-args {{ quantidade }}
 
 Acesse o app de teste:
 
